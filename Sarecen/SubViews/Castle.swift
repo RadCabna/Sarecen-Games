@@ -1,5 +1,5 @@
 //
-//  Shop.swift
+//  Castle.swift
 //  Sarecen
 //
 //  Created by Алкександр Степанов on 20.05.2025.
@@ -7,18 +7,16 @@
 
 import SwiftUI
 
-struct Shop: View {
+struct Castle: View {
     @EnvironmentObject var coordinator: Coordinator
     @AppStorage("coinCount") var coinCount = 0
     @AppStorage("wreathCount") var wreathCount = 0
-    @AppStorage("shopType") var shopType = 1
     @State private var darckOpacity: CGFloat = 0
-    @State private var shopArray = Arrays.backgroundArray
-    @State private var shopItemsData = UserDefaults.standard.array(forKey: "shopItemsBGData") as? [Int] ?? [1,0,0,0,0]
-    @State private var dataName = "shopItemsBGData"
+    @State private var castleArray = Arrays.castleArray
+    @State private var castleData = UserDefaults.standard.array(forKey: "castleData") as? [Int] ?? [1,1,1,1,1]
     var body: some View {
         ZStack {
-            Background(backgroundNumber: 1)
+            Background(backgroundNumber: 5)
             HStack {
                 Spacer()
                 Image("pointFrame")
@@ -76,77 +74,33 @@ struct Shop: View {
             .padding()
         .opacity(darckOpacity)
             HStack {
-                ForEach(0..<shopArray.count, id: \.self) { item in
-                    VStack {
-                        Image(shopArray[item].name)
+                ForEach(0..<castleArray.count, id: \.self) { index in
+                    VStack(spacing: 0) {
+                        Image(castleArray[index].image)
                             .resizable()
                             .scaledToFit()
                             .frame(width: screenWidth*0.15)
-                        Image("shopItemCost")
+                        Image("castlePlate")
                             .resizable()
                             .scaledToFit()
-                            .frame(width: screenWidth*0.12)
+                            .frame(width: screenWidth*0.13)
                             .overlay(
-                                Text("\(shopArray[item].cost)")
-                                    .font(Font.custom("Jomhuria-Regular", size: screenWidth*0.05))
+                                Text(castleArray[index].name)
+                                    .font(Font.custom("Jomhuria-Regular", size: screenWidth*0.03))
                                     .foregroundColor(Color("textColor"))
-                                    .offset(x: screenWidth*0.01, y: screenWidth*0.004)
                             )
-                        if coinCount >= shopArray[item].cost || shopItemsData[item] == 1{
-                            if shopItemsData[item] == 0 {
-                                Image("shopMarkPlus")
-                                    .resizable()
-                                    .scaledToFit()
-                                    .frame(width: screenWidth*0.06)
-                                    .onTapGesture {
-                                        buyItem(item: item)
-                                    }
-                            }
-                            if shopItemsData[item] == 1 {
-                                Image("shopMarkOk")
-                                    .resizable()
-                                    .scaledToFit()
-                                    .frame(width: screenWidth*0.06)
-                            }
-                        } else {
-                            Image("shopMarkLock")
-                                .resizable()
-                                .scaledToFit()
-                                .frame(width: screenWidth*0.06)
-                        }
                     }
+                    .offset(y: -screenHeight*castleArray[index].yOffset)
                 }
             }
-            .offset(y: screenWidth*0.05)
+            .offset(y: screenHeight*0.17)
             .opacity(darckOpacity)
         }
-       
+        
         .onAppear {
-            updateShopArray()
             showMenuAnimation()
         }
         
-    }
-    
-    func buyItem(item: Int) {
-        if coinCount >= shopArray[item].cost {
-            coinCount -= shopArray[item].cost
-            shopItemsData[item] = 1
-            UserDefaults.standard.set(shopItemsData, forKey: dataName)
-        }
-    }
-    
-    func updateShopArray() {
-        switch shopType {
-        case 1:
-            shopArray = Arrays.backgroundArray
-            dataName = "shopItemsBGData"
-            shopItemsData = UserDefaults.standard.array(forKey: "shopItemsBGData") as? [Int] ?? [1,0,0,0,0]
-        default:
-            shopArray = Arrays.wreathArray
-            dataName = "shopItemsWreathData"
-            shopItemsData = UserDefaults.standard.array(forKey: "shopItemsWreathData") as? [Int] ?? [1,0,0,0,0]
-        }
     }
     
     func showMenuAnimation() {
@@ -164,5 +118,5 @@ struct Shop: View {
 }
 
 #Preview {
-    Shop()
+    Castle()
 }

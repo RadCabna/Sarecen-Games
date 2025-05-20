@@ -6,17 +6,50 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		DDE65CB92DDC95CB00488252 /* SarecenApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE65CB62DDC95CB00488252 /* SarecenApp.swift */; };
+		DDE65CBA2DDC95CB00488252 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDE65CB32DDC95CB00488252 /* Assets.xcassets */; };
+		DDE65CC32DDC97FC00488252 /* Loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE65CC22DDC97FC00488252 /* Loading.swift */; };
+		DDE65CC52DDC980C00488252 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE65CC42DDC980C00488252 /* Menu.swift */; };
+		DDE65CC72DDC981B00488252 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE65CC62DDC981B00488252 /* Game.swift */; };
+		DDE65CC92DDC983800488252 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE65CC82DDC983800488252 /* Coordinator.swift */; };
+		DDE65CCB2DDC98A700488252 /* Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE65CCA2DDC98A700488252 /* Controller.swift */; };
+		DDE65CCE2DDC9A3400488252 /* Background.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE65CCD2DDC9A3400488252 /* Background.swift */; };
+		DDE65CD02DDCA52F00488252 /* SizeExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE65CCF2DDCA52F00488252 /* SizeExtention.swift */; };
+		DDE65CD22DDCA69500488252 /* MenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE65CD12DDCA69500488252 /* MenuButton.swift */; };
+		DDE65CD42DDCA7F100488252 /* Jomhuria-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DDE65CD32DDCA7F100488252 /* Jomhuria-Regular.ttf */; };
+		DDE65CD72DDCC67D00488252 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE65CD62DDCC67D00488252 /* Settings.swift */; };
+		DDE65CD92DDCCAD100488252 /* SoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE65CD82DDCCAD100488252 /* SoundManager.swift */; };
+		DDE65CDB2DDCD8E100488252 /* ChoseGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE65CDA2DDCD8E100488252 /* ChoseGame.swift */; };
+		DDE65CDD2DDCDD2700488252 /* Shop.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE65CDC2DDCDD2700488252 /* Shop.swift */; };
+		DDE65CDF2DDCDD6D00488252 /* SelectShopItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE65CDE2DDCDD6D00488252 /* SelectShopItem.swift */; };
+		DDE65CE12DDCED2B00488252 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE65CE02DDCED2B00488252 /* Model.swift */; };
+		DDE65CE32DDD0B4600488252 /* Castle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE65CE22DDD0B4600488252 /* Castle.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		DDE65CA32DDC95B400488252 /* Sarecen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sarecen.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DDE65CB32DDC95CB00488252 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DDE65CB52DDC95CB00488252 /* Sarecen.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Sarecen.entitlements; sourceTree = "<group>"; };
+		DDE65CB62DDC95CB00488252 /* SarecenApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SarecenApp.swift; sourceTree = "<group>"; };
+		DDE65CC22DDC97FC00488252 /* Loading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loading.swift; sourceTree = "<group>"; };
+		DDE65CC42DDC980C00488252 /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
+		DDE65CC62DDC981B00488252 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		DDE65CC82DDC983800488252 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		DDE65CCA2DDC98A700488252 /* Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Controller.swift; sourceTree = "<group>"; };
+		DDE65CCD2DDC9A3400488252 /* Background.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Background.swift; sourceTree = "<group>"; };
+		DDE65CCF2DDCA52F00488252 /* SizeExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeExtention.swift; sourceTree = "<group>"; };
+		DDE65CD12DDCA69500488252 /* MenuButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuButton.swift; sourceTree = "<group>"; };
+		DDE65CD32DDCA7F100488252 /* Jomhuria-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Jomhuria-Regular.ttf"; sourceTree = "<group>"; };
+		DDE65CD52DDCA7FF00488252 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		DDE65CD62DDCC67D00488252 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		DDE65CD82DDCCAD100488252 /* SoundManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundManager.swift; sourceTree = "<group>"; };
+		DDE65CDA2DDCD8E100488252 /* ChoseGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoseGame.swift; sourceTree = "<group>"; };
+		DDE65CDC2DDCDD2700488252 /* Shop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shop.swift; sourceTree = "<group>"; };
+		DDE65CDE2DDCDD6D00488252 /* SelectShopItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectShopItem.swift; sourceTree = "<group>"; };
+		DDE65CE02DDCED2B00488252 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		DDE65CE22DDD0B4600488252 /* Castle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Castle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		DDE65CA52DDC95B400488252 /* Sarecen */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = Sarecen;
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		DDE65CA02DDC95B400488252 /* Frameworks */ = {
@@ -32,7 +65,7 @@
 		DDE65C9A2DDC95B400488252 = {
 			isa = PBXGroup;
 			children = (
-				DDE65CA52DDC95B400488252 /* Sarecen */,
+				DDE65CB72DDC95CB00488252 /* Sarecen */,
 				DDE65CA42DDC95B400488252 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -43,6 +76,89 @@
 				DDE65CA32DDC95B400488252 /* Sarecen.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		DDE65CB72DDC95CB00488252 /* Sarecen */ = {
+			isa = PBXGroup;
+			children = (
+				DDE65CD52DDCA7FF00488252 /* Info.plist */,
+				DDE65CBB2DDC95CF00488252 /* Views */,
+				DDE65CBC2DDC97A500488252 /* SubViews */,
+				DDE65CBD2DDC97AC00488252 /* Coordinator */,
+				DDE65CBE2DDC97B300488252 /* Extentions */,
+				DDE65CC02DDC97C000488252 /* Fonts */,
+				DDE65CBF2DDC97BA00488252 /* Sounds */,
+				DDE65CC12DDC97CA00488252 /* Models */,
+				DDE65CB32DDC95CB00488252 /* Assets.xcassets */,
+				DDE65CB52DDC95CB00488252 /* Sarecen.entitlements */,
+				DDE65CB62DDC95CB00488252 /* SarecenApp.swift */,
+			);
+			path = Sarecen;
+			sourceTree = "<group>";
+		};
+		DDE65CBB2DDC95CF00488252 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DDE65CC22DDC97FC00488252 /* Loading.swift */,
+				DDE65CC42DDC980C00488252 /* Menu.swift */,
+				DDE65CC62DDC981B00488252 /* Game.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		DDE65CBC2DDC97A500488252 /* SubViews */ = {
+			isa = PBXGroup;
+			children = (
+				DDE65CCD2DDC9A3400488252 /* Background.swift */,
+				DDE65CD12DDCA69500488252 /* MenuButton.swift */,
+				DDE65CD62DDCC67D00488252 /* Settings.swift */,
+				DDE65CCA2DDC98A700488252 /* Controller.swift */,
+				DDE65CDA2DDCD8E100488252 /* ChoseGame.swift */,
+				DDE65CDE2DDCDD6D00488252 /* SelectShopItem.swift */,
+				DDE65CDC2DDCDD2700488252 /* Shop.swift */,
+				DDE65CE22DDD0B4600488252 /* Castle.swift */,
+			);
+			path = SubViews;
+			sourceTree = "<group>";
+		};
+		DDE65CBD2DDC97AC00488252 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				DDE65CC82DDC983800488252 /* Coordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		DDE65CBE2DDC97B300488252 /* Extentions */ = {
+			isa = PBXGroup;
+			children = (
+				DDE65CCF2DDCA52F00488252 /* SizeExtention.swift */,
+			);
+			path = Extentions;
+			sourceTree = "<group>";
+		};
+		DDE65CBF2DDC97BA00488252 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				DDE65CD82DDCCAD100488252 /* SoundManager.swift */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
+		DDE65CC02DDC97C000488252 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				DDE65CD32DDCA7F100488252 /* Jomhuria-Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		DDE65CC12DDC97CA00488252 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DDE65CE02DDCED2B00488252 /* Model.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -59,9 +175,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				DDE65CA52DDC95B400488252 /* Sarecen */,
 			);
 			name = Sarecen;
 			packageProductDependencies = (
@@ -109,6 +222,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DDE65CD42DDCA7F100488252 /* Jomhuria-Regular.ttf in Resources */,
+				DDE65CBA2DDC95CB00488252 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,6 +234,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DDE65CE12DDCED2B00488252 /* Model.swift in Sources */,
+				DDE65CC72DDC981B00488252 /* Game.swift in Sources */,
+				DDE65CCE2DDC9A3400488252 /* Background.swift in Sources */,
+				DDE65CE32DDD0B4600488252 /* Castle.swift in Sources */,
+				DDE65CC92DDC983800488252 /* Coordinator.swift in Sources */,
+				DDE65CCB2DDC98A700488252 /* Controller.swift in Sources */,
+				DDE65CD72DDCC67D00488252 /* Settings.swift in Sources */,
+				DDE65CC32DDC97FC00488252 /* Loading.swift in Sources */,
+				DDE65CD22DDCA69500488252 /* MenuButton.swift in Sources */,
+				DDE65CC52DDC980C00488252 /* Menu.swift in Sources */,
+				DDE65CDF2DDCDD6D00488252 /* SelectShopItem.swift in Sources */,
+				DDE65CDD2DDCDD2700488252 /* Shop.swift in Sources */,
+				DDE65CB92DDC95CB00488252 /* SarecenApp.swift in Sources */,
+				DDE65CD92DDCCAD100488252 /* SoundManager.swift in Sources */,
+				DDE65CDB2DDCD8E100488252 /* ChoseGame.swift in Sources */,
+				DDE65CD02DDCA52F00488252 /* SizeExtention.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,17 +384,19 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Sarecen/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 15.4;
@@ -272,10 +405,11 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2,7";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				XROS_DEPLOYMENT_TARGET = 2.4;
 			};
 			name = Debug;
@@ -292,17 +426,19 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Sarecen/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 15.4;
@@ -311,10 +447,11 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2,7";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				XROS_DEPLOYMENT_TARGET = 2.4;
 			};
 			name = Release;
