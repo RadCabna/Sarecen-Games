@@ -67,7 +67,7 @@ struct Shop: View {
                     .onTapGesture {
                         closeMenuAnimation()
                         DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
-                            coordinator.navigate(to: .mainMenu)
+                            coordinator.navigate(to: .selectShopItem)
                         }
                     }
                 

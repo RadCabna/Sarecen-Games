@@ -17,6 +17,7 @@ enum CoordinatorView: Equatable {
     case selectShopItem
    case shop
     case castle
+    case castleSettings
 }
 
 final class Coordinator: ObservableObject {
@@ -41,6 +42,8 @@ final class Coordinator: ObservableObject {
             view = AnyView(Shop())
         case .castle:
             view = AnyView(Castle())
+        case .castleSettings:
+            view = AnyView(CastleSettings())
         }
         return view
     }

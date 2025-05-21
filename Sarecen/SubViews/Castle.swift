@@ -11,9 +11,11 @@ struct Castle: View {
     @EnvironmentObject var coordinator: Coordinator
     @AppStorage("coinCount") var coinCount = 0
     @AppStorage("wreathCount") var wreathCount = 0
+    @AppStorage("castleIndex") var castleIndex = 0
     @State private var darckOpacity: CGFloat = 0
     @State private var castleArray = Arrays.castleArray
-    @State private var castleData = UserDefaults.standard.array(forKey: "castleData") as? [Int] ?? [1,1,1,1,1]
+    @State private var castleData = UserDefaults.standard.array(forKey: "castleData") as? [Int] ?? [0,0,0,0,0]
+    
     var body: some View {
         ZStack {
             Background(backgroundNumber: 5)
@@ -31,7 +33,7 @@ struct Castle: View {
                                 .frame(width: screenWidth*0.05)
                                 .offset(x:-screenWidth*0.06)
                                 .onTapGesture {
-                                    coinCount += 100
+//                                    coinCount += 100
                                 }
                             Text("\(coinCount)")
                                 .font(Font.custom("Jomhuria-Regular", size: screenWidth*0.06))
@@ -51,6 +53,9 @@ struct Castle: View {
                                 .scaledToFit()
                                 .frame(width: screenWidth*0.05)
                                 .offset(x:-screenWidth*0.06, y: -screenWidth*0.002)
+                                .onTapGesture {
+//                                    wreathCount += 100
+                                }
                             Text("\(wreathCount)")
                                 .font(Font.custom("Jomhuria-Regular", size: screenWidth*0.06))
                                 .foregroundColor(Color("textColor"))
@@ -89,6 +94,13 @@ struct Castle: View {
                                     .font(Font.custom("Jomhuria-Regular", size: screenWidth*0.03))
                                     .foregroundColor(Color("textColor"))
                             )
+                    }
+                    .onTapGesture {
+                        castleIndex = index
+                        closeMenuAnimation()
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+                            coordinator.navigate(to: .castleSettings)
+                        }
                     }
                     .offset(y: -screenHeight*castleArray[index].yOffset)
                 }

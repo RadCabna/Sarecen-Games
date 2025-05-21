@@ -25,6 +25,10 @@
 		DDE65CDF2DDCDD6D00488252 /* SelectShopItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE65CDE2DDCDD6D00488252 /* SelectShopItem.swift */; };
 		DDE65CE12DDCED2B00488252 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE65CE02DDCED2B00488252 /* Model.swift */; };
 		DDE65CE32DDD0B4600488252 /* Castle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE65CE22DDD0B4600488252 /* Castle.swift */; };
+		DDE65CE52DDDFABF00488252 /* CastleSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE65CE42DDDFABF00488252 /* CastleSettings.swift */; };
+		DDE65CE82DDE1F6A00488252 /* Puzzle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE65CE72DDE1F6A00488252 /* Puzzle.swift */; };
+		DDE65CEA2DDE5CE800488252 /* WinPuzzle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE65CE92DDE5CE800488252 /* WinPuzzle.swift */; };
+		DDE65CEC2DDE5CF200488252 /* LosePuzzle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE65CEB2DDE5CF200488252 /* LosePuzzle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +53,10 @@
 		DDE65CDE2DDCDD6D00488252 /* SelectShopItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectShopItem.swift; sourceTree = "<group>"; };
 		DDE65CE02DDCED2B00488252 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		DDE65CE22DDD0B4600488252 /* Castle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Castle.swift; sourceTree = "<group>"; };
+		DDE65CE42DDDFABF00488252 /* CastleSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastleSettings.swift; sourceTree = "<group>"; };
+		DDE65CE72DDE1F6A00488252 /* Puzzle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Puzzle.swift; sourceTree = "<group>"; };
+		DDE65CE92DDE5CE800488252 /* WinPuzzle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WinPuzzle.swift; sourceTree = "<group>"; };
+		DDE65CEB2DDE5CF200488252 /* LosePuzzle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LosePuzzle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +117,7 @@
 		DDE65CBC2DDC97A500488252 /* SubViews */ = {
 			isa = PBXGroup;
 			children = (
+				DDE65CE62DDE1F5000488252 /* Games */,
 				DDE65CCD2DDC9A3400488252 /* Background.swift */,
 				DDE65CD12DDCA69500488252 /* MenuButton.swift */,
 				DDE65CD62DDCC67D00488252 /* Settings.swift */,
@@ -117,6 +126,7 @@
 				DDE65CDE2DDCDD6D00488252 /* SelectShopItem.swift */,
 				DDE65CDC2DDCDD2700488252 /* Shop.swift */,
 				DDE65CE22DDD0B4600488252 /* Castle.swift */,
+				DDE65CE42DDDFABF00488252 /* CastleSettings.swift */,
 			);
 			path = SubViews;
 			sourceTree = "<group>";
@@ -159,6 +169,16 @@
 				DDE65CE02DDCED2B00488252 /* Model.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		DDE65CE62DDE1F5000488252 /* Games */ = {
+			isa = PBXGroup;
+			children = (
+				DDE65CE72DDE1F6A00488252 /* Puzzle.swift */,
+				DDE65CE92DDE5CE800488252 /* WinPuzzle.swift */,
+				DDE65CEB2DDE5CF200488252 /* LosePuzzle.swift */,
+			);
+			path = Games;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -238,9 +258,11 @@
 				DDE65CC72DDC981B00488252 /* Game.swift in Sources */,
 				DDE65CCE2DDC9A3400488252 /* Background.swift in Sources */,
 				DDE65CE32DDD0B4600488252 /* Castle.swift in Sources */,
+				DDE65CEA2DDE5CE800488252 /* WinPuzzle.swift in Sources */,
 				DDE65CC92DDC983800488252 /* Coordinator.swift in Sources */,
 				DDE65CCB2DDC98A700488252 /* Controller.swift in Sources */,
 				DDE65CD72DDCC67D00488252 /* Settings.swift in Sources */,
+				DDE65CEC2DDE5CF200488252 /* LosePuzzle.swift in Sources */,
 				DDE65CC32DDC97FC00488252 /* Loading.swift in Sources */,
 				DDE65CD22DDCA69500488252 /* MenuButton.swift in Sources */,
 				DDE65CC52DDC980C00488252 /* Menu.swift in Sources */,
@@ -249,7 +271,9 @@
 				DDE65CB92DDC95CB00488252 /* SarecenApp.swift in Sources */,
 				DDE65CD92DDCCAD100488252 /* SoundManager.swift in Sources */,
 				DDE65CDB2DDCD8E100488252 /* ChoseGame.swift in Sources */,
+				DDE65CE82DDE1F6A00488252 /* Puzzle.swift in Sources */,
 				DDE65CD02DDCA52F00488252 /* SizeExtention.swift in Sources */,
+				DDE65CE52DDDFABF00488252 /* CastleSettings.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
