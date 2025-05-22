@@ -35,6 +35,12 @@ struct ChoseGame: View {
                         .degrees(angle),
                         axis: (x: 1, y: 0, z: 0)
                     )
+                    .onTapGesture {
+                        closeMenuAnimation()
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+                            coordinator.navigate(to: .game)
+                        }
+                    }
                     .offset(y: -screenWidth*0.05)
                 MenuButton(size: 0.3, text:"PUZZLE CLASH")
                     .offset(y: screenWidth*0.05)
@@ -42,6 +48,12 @@ struct ChoseGame: View {
                         .degrees(angle1),
                         axis: (x: 1, y: 0, z: 0)
                     )
+                    .onTapGesture {
+                        closeMenuAnimation()
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+                            coordinator.navigate(to: .puzzle)
+                        }
+                    }
                     .offset(y: -screenWidth*0.05)
             }
             .opacity(darckOpacity)

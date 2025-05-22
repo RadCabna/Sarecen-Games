@@ -23,7 +23,7 @@ struct Puzzle: View {
     @State private var youWin = false
     var body: some View {
         ZStack {
-            Background(backgroundNumber: 4)
+            Background(backgroundNumber: 6)
             ZStack {
                 Image("timerFrame")
                     .resizable()
@@ -42,16 +42,23 @@ struct Puzzle: View {
                         .scaledToFit()
                         .frame(width: screenWidth*0.08)
                         .onTapGesture {
-                            restartGame()
+//                            restartGame()
+                            closeMenuAnimation()
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+                                restartGame()
+                                showMenuAnimation()
+                            }
                         }
                     Spacer()
                     Image("homeButton")
                         .resizable()
                         .scaledToFit()
                         .frame(width: screenWidth*0.08)
-                        .onTapGesture{
-                            restartGame()
-                            updateYourPuzzle()
+                        .onTapGesture {
+                            closeMenuAnimation()
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+                                coordinator.navigate(to: .mainMenu)
+                            }
                         }
                 }
             }
@@ -116,12 +123,16 @@ struct Puzzle: View {
         }
         
         .onChange(of: youWin) { _ in
-            restartGame()
-            updateYourPuzzle()
+            if !youWin {
+                restartGame()
+                updateYourPuzzle()
+            }
         }
         
         .onChange(of: youLose) { _ in
-            restartGame()
+            if !youLose {
+                restartGame()
+            }
         }
         
         .onChange(of: elapsedTime) { _ in
@@ -139,6 +150,7 @@ struct Puzzle: View {
         }
         
         .onAppear {
+            updateYourPuzzle()
             startTimer()
             showMenuAnimation()
             partSize = screenWidth*0.12

@@ -33,7 +33,7 @@ struct Shop: View {
                                 .frame(width: screenWidth*0.05)
                                 .offset(x:-screenWidth*0.06)
                                 .onTapGesture {
-                                    coinCount += 100
+//                                    coinCount += 100
                                 }
                             Text("\(coinCount)")
                                 .font(Font.custom("Jomhuria-Regular", size: screenWidth*0.06))

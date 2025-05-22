@@ -1,34 +1,26 @@
 //
-//  Menu.swift
+//  SelectMiniGames.swift
 //  Sarecen
 //
-//  Created by Алкександр Степанов on 20.05.2025.
+//  Created by Алкександр Степанов on 22.05.2025.
 //
 
 import SwiftUI
 
-struct Menu: View {
+struct SelectMiniGames: View {
     @EnvironmentObject var coordinator: Coordinator
     @AppStorage("coinCount") var coinCount = 0
     @AppStorage("wreathCount") var wreathCount = 0
+    @AppStorage("shopType") var shopType = 1
     @State private var angle: Double = -90
     @State private var angle1: Double = -90
+    @State private var angle2: Double = -90
+    @State private var angle3: Double = -90
     @State private var darckOpacity: CGFloat = 0
     var body: some View {
         ZStack {
             Background(backgroundNumber: 1)
-            VStack {
                 HStack {
-                    Image("shopButton")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: screenWidth*0.08)
-                        .onTapGesture {
-                            closeMenuAnimation()
-                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
-                                coordinator.navigate(to: .selectShopItem)
-                            }
-                        }
                     Spacer()
                     Image("pointFrame")
                         .resizable()
@@ -47,6 +39,7 @@ struct Menu: View {
                                     .offset(x: screenWidth*0.04, y: screenWidth*0.004)
                             }
                         )
+                        .padding(.leading, screenWidth*0.08)
                     Image("pointFrame")
                         .resizable()
                         .scaledToFit()
@@ -65,73 +58,84 @@ struct Menu: View {
                             }
                         )
                     Spacer()
-                    Image("settingsButton")
+                    Image("homeButton")
                         .resizable()
                         .scaledToFit()
                         .frame(width: screenWidth*0.08)
                         .onTapGesture {
                             closeMenuAnimation()
                             DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
-                                coordinator.navigate(to: .settings)
+                                coordinator.navigate(to: .mainMenu)
                             }
                         }
                     
                 }
                 .frame(maxHeight: .infinity, alignment: .top)
                 .padding()
-            }
             .opacity(darckOpacity)
-            VStack(spacing: screenWidth*0.02) {
-                MenuButton(size: 0.3, text:"PLAY")
-                    .offset(y: screenWidth*0.05)
-                    .rotation3DEffect(
-                        .degrees(angle),
-                        axis: (x: 1, y: 0, z: 0)
-                    )
-                    .offset(y: -screenWidth*0.05)
-                    .onTapGesture {
-                        closeMenuAnimation()
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
-                            coordinator.navigate(to: .choseGame)
-                        }
-                    }
-                MenuButton(size: 0.3, text:"MY PALACE")
-                    .offset(y: screenWidth*0.05)
-                    .rotation3DEffect(
-                        .degrees(angle1),
-                        axis: (x: 1, y: 0, z: 0)
-                    )
-                    .offset(y: -screenWidth*0.05)
-                    .onTapGesture {
-                        closeMenuAnimation()
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
-                            coordinator.navigate(to: .castle)
-                        }
-                    }
-                HStack {
-                    Image("miniGamesButton")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: screenWidth*0.08)
+            HStack(spacing: screenWidth*0.06) {
+                VStack(spacing: screenWidth*0.02) {
+                    MenuButton(size: 0.3, text:"GUES NUMBER")
+                        .offset(y: screenWidth*0.05)
+                        .rotation3DEffect(
+                            .degrees(angle),
+                            axis: (x: 1, y: 0, z: 0)
+                        )
+                        .offset(y: -screenWidth*0.05)
                         .onTapGesture {
+                            shopType = 1
                             closeMenuAnimation()
                             DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
-                                coordinator.navigate(to: .selectMiniGames)
+                                coordinator.navigate(to: .minGame1)
                             }
                         }
-                    Image("achievementsButton")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: screenWidth*0.08)
+                    MenuButton(size: 0.3, text:"FIND A PAIR")
+                        .offset(y: screenWidth*0.05)
+                        .rotation3DEffect(
+                            .degrees(angle1),
+                            axis: (x: 1, y: 0, z: 0)
+                        )
+                        .offset(y: -screenWidth*0.05)
                         .onTapGesture {
+                            shopType = 2
                             closeMenuAnimation()
                             DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
-                                coordinator.navigate(to: .achievements)
+                                coordinator.navigate(to: .minGame2)
+                            }
+                        }
+                }
+                VStack(spacing: screenWidth*0.02) {
+                    MenuButton(size: 0.3, text:"MEMORY AID")
+                        .offset(y: screenWidth*0.05)
+                        .rotation3DEffect(
+                            .degrees(angle2),
+                            axis: (x: 1, y: 0, z: 0)
+                        )
+                        .offset(y: -screenWidth*0.05)
+                        .onTapGesture {
+                            shopType = 1
+                            closeMenuAnimation()
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+                                coordinator.navigate(to: .minGame3)
+                            }
+                        }
+                    MenuButton(size: 0.3, text:"LABYRINTH")
+                        .offset(y: screenWidth*0.05)
+                        .rotation3DEffect(
+                            .degrees(angle3),
+                            axis: (x: 1, y: 0, z: 0)
+                        )
+                        .offset(y: -screenWidth*0.05)
+                        .onTapGesture {
+                            shopType = 2
+                            closeMenuAnimation()
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+                                coordinator.navigate(to: .minGame4)
                             }
                         }
                 }
             }
-            .offset(y: screenHeight*0.12)
+            .padding(.top, screenWidth*0.1)
             .opacity(darckOpacity)
         }
         
@@ -139,6 +143,8 @@ struct Menu: View {
             showMenuAnimation()
             buttonAnimation(delay: 0, angle: $angle)
             buttonAnimation(delay: 0.2, angle: $angle1)
+            buttonAnimation(delay: 0.3, angle: $angle2)
+            buttonAnimation(delay: 0.4, angle: $angle3)
         }
         
     }
@@ -182,9 +188,8 @@ struct Menu: View {
             }
         }
     }
-    
 }
 
 #Preview {
-    Menu()
+    SelectMiniGames()
 }

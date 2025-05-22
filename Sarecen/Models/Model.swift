@@ -35,8 +35,80 @@ struct PuzzleImages: Equatable {
     var startOffset:CGSize? = nil
 }
 
+struct MiniGFour: Equatable {
+    var heart = false
+    var star = false
+    var left = false
+    var right = false
+    var up = false
+    var down = false
+}
+
+struct DropItem: Equatable {
+    var name: String
+    var yOffset: CGFloat
+    var xOffset: CGFloat = 0
+    var timer: Timer? = nil
+    var dropTime = 0.02
+    var delay: Double
+    var collected: Bool = false
+    var opacity: CGFloat = 1
+}
+
+
+
+struct Step: Equatable {
+    var code: String
+}
 
 class Arrays {
+    
+    static var dropCoin: DropItem = DropItem(name: "gameCoin", yOffset: -0.7, delay: 0)
+    static var dropWreath: DropItem = DropItem(name: "wreathGold", yOffset: -0.7, delay: 0)
+    
+    static var gameItemsArray: [DropItem] = [
+        DropItem(name: "gameItem1", yOffset: -0.7, delay: 1),
+        DropItem(name: "gameItem2", yOffset: -0.7, delay: 0),
+        DropItem(name: "gameItem3", yOffset: -0.7, delay: 2),
+    ]
+    
+    static var achievementsTextArray = [
+        "Catch a golden wreath in the main game",
+        "Complete the puzzle mini-game",
+        "Successfully complete all 4 mini-games",
+        "Claim the daily reward 7 days in a row",
+        "Complete main game without catching a bad item"
+    ]
+    
+    static var labyrinthArray: [[MiniGFour]] = [
+        [MiniGFour(star: true),MiniGFour(),MiniGFour(),MiniGFour(),MiniGFour(),MiniGFour(),MiniGFour(),MiniGFour(),MiniGFour(),MiniGFour(),MiniGFour(),MiniGFour()],
+        [MiniGFour(),MiniGFour(),MiniGFour(),MiniGFour(),MiniGFour(),MiniGFour(),MiniGFour(),MiniGFour(),MiniGFour(),MiniGFour(),MiniGFour(),MiniGFour()],
+        [MiniGFour(),MiniGFour(),MiniGFour(),MiniGFour(),MiniGFour(),MiniGFour(),MiniGFour(),MiniGFour(),MiniGFour(),MiniGFour(),MiniGFour(),MiniGFour()],
+        [MiniGFour(),MiniGFour(),MiniGFour(),MiniGFour(),MiniGFour(),MiniGFour(),MiniGFour(),MiniGFour(),MiniGFour(),MiniGFour(),MiniGFour(heart: true),MiniGFour()],
+        [MiniGFour(),MiniGFour(),MiniGFour(),MiniGFour(),MiniGFour(),MiniGFour(),MiniGFour(),MiniGFour(),MiniGFour(),MiniGFour(),MiniGFour(),MiniGFour()],
+        [MiniGFour(),MiniGFour(),MiniGFour(),MiniGFour(),MiniGFour(),MiniGFour(),MiniGFour(),MiniGFour(),MiniGFour(),MiniGFour(),MiniGFour(),MiniGFour()],
+        [MiniGFour(),MiniGFour(),MiniGFour(),MiniGFour(),MiniGFour(),MiniGFour(),MiniGFour(),MiniGFour(),MiniGFour(),MiniGFour(),MiniGFour(),MiniGFour()],
+        [MiniGFour(),MiniGFour(),MiniGFour(),MiniGFour(),MiniGFour(),MiniGFour(),MiniGFour(),MiniGFour(),MiniGFour(),MiniGFour(),MiniGFour(),MiniGFour()],
+        [MiniGFour(),MiniGFour(),MiniGFour(),MiniGFour(),MiniGFour(),MiniGFour(),MiniGFour(),MiniGFour(),MiniGFour(),MiniGFour(),MiniGFour(),MiniGFour()],
+        [MiniGFour(),MiniGFour(),MiniGFour(),MiniGFour(),MiniGFour(),MiniGFour(),MiniGFour(),MiniGFour(),MiniGFour(),MiniGFour(),MiniGFour(),MiniGFour()],
+        [MiniGFour(),MiniGFour(),MiniGFour(),MiniGFour(),MiniGFour(),MiniGFour(),MiniGFour(),MiniGFour(),MiniGFour(),MiniGFour(),MiniGFour(),MiniGFour()],
+        [MiniGFour(),MiniGFour(),MiniGFour(),MiniGFour(),MiniGFour(),MiniGFour(),MiniGFour(),MiniGFour(),MiniGFour(),MiniGFour(),MiniGFour(),MiniGFour()]
+    ]
+    
+    static var posibleStepsArray: [[Step]] = [
+        [Step(code: "0001"),Step(code: "0101"),Step(code: "1000"),Step(code: "0101"),Step(code: "1100"),Step(code: "1101"),Step(code: "1100"),Step(code: "1100"),Step(code: "1001"),Step(code: "0100"),Step(code: "1100"),Step(code: "1010")],
+        [Step(code: "0011"),Step(code: "0111"),Step(code: "1100"),Step(code: "1010"),Step(code: "0101"),Step(code: "1010"),Step(code: "0100"),Step(code: "1100"),Step(code: "1110"),Step(code: "1100"),Step(code: "1001"),Step(code: "0011")],
+        [Step(code: "0011"),Step(code: "0110"),Step(code: "1100"),Step(code: "1001"),Step(code: "0110"),Step(code: "1100"),Step(code: "1100"),Step(code: "1100"),Step(code: "1001"),Step(code: "0010"),Step(code: "0110"),Step(code: "1011")],
+        [Step(code: "0110"),Step(code: "1100"),Step(code: "1001"),Step(code: "0110"),Step(code: "1001"),Step(code: "0100"),Step(code: "1101"),Step(code: "1001"),Step(code: "0011"),Step(code: "0111"),Step(code: "1000"),Step(code: "0011")],
+        [Step(code: "0101"),Step(code: "1000"),Step(code: "0011"),Step(code: "0001"),Step(code: "0110"),Step(code: "1100"),Step(code: "1010"),Step(code: "0011"),Step(code: "0011"),Step(code: "0111"),Step(code: "1001"),Step(code: "0011")],
+        [Step(code: "0011"),Step(code: "0101"),Step(code: "1010"),Step(code: "0011"),Step(code: "0101"),Step(code: "1101"),Step(code: "1000"),Step(code: "0011"),Step(code: "0011"),Step(code: "0010"),Step(code: "0110"),Step(code: "1010")],
+        [Step(code: "0011"),Step(code: "0011"),Step(code: "0001"),Step(code: "0111"),Step(code: "1010"),Step(code: "0110"),Step(code: "1100"),Step(code: "1010"),Step(code: "0110"),Step(code: "1001"),Step(code: "0101"),Step(code: "1001")],
+        [Step(code: "0011"),Step(code: "0011"),Step(code: "0011"),Step(code: "0011"),Step(code: "0101"),Step(code: "1100"),Step(code: "1001"),Step(code: "0100"),Step(code: "1000"),Step(code: "0110"),Step(code: "1010"),Step(code: "0011")],
+        [Step(code: "0011"),Step(code: "0011"),Step(code: "0111"),Step(code: "1110"),Step(code: "1010"),Step(code: "0100"),Step(code: "1110"),Step(code: "1001"),Step(code: "0011"),Step(code: "0101"),Step(code: "1100"),Step(code: "1011")],
+        [Step(code: "0011"),Step(code: "0011"),Step(code: "0011"),Step(code: "0101"),Step(code: "1100"),Step(code: "1001"),Step(code: "0101"),Step(code: "1010"),Step(code: "0011"),Step(code: "0011"),Step(code: "0100"),Step(code: "1010")],
+        [Step(code: "0011"),Step(code: "0011"),Step(code: "0010"),Step(code: "0011"),Step(code: "0101"),Step(code: "1010"),Step(code: "0110"),Step(code: "1100"),Step(code: "1010"),Step(code: "0110"),Step(code: "1100"),Step(code: "1001")],
+        [Step(code: "0110"),Step(code: "1110"),Step(code: "1100"),Step(code: "1010"),Step(code: "0110"),Step(code: "1100"),Step(code: "1100"),Step(code: "1100"),Step(code: "1100"),Step(code: "1100"),Step(code: "1100"),Step(code: "1010")],
+    ]
     
     static var puzzlePartsArray = [
         ["mosaic10","mosaic11","mosaic12","mosaic13","mosaic14","mosaic15","mosaic16","mosaic17","mosaic18"],
