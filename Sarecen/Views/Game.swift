@@ -11,6 +11,7 @@ struct Game: View {
     @EnvironmentObject var coordinator: Coordinator
     @AppStorage("coinCount") var coinCount = 0
     @AppStorage("wreathCount") var wreathCount = 0
+    @AppStorage("bgNumber") var bgNumber = 3
     @State private var timer: Timer? = nil
     @State private var coinTimer: Timer? = nil
     @State private var wreathTimer: Timer? = nil
@@ -24,7 +25,7 @@ struct Game: View {
     @State private var dropWreath = Arrays.dropWreath
     var body: some View {
         ZStack {
-            Background(backgroundNumber: 3)
+            Background(backgroundNumber: bgNumber)
             ZStack {
                 ForEach(0..<gameItemsArray.count, id: \.self) { index in
                     Image(gameItemsArray[index].name)

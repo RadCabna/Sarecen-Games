@@ -45,6 +45,16 @@ struct Background: View {
             return "background4"
         case 5:
             return "background5"
+        case 6:
+            return "background6"
+        case 7:
+            return "background7"
+        case 8:
+            return "background8"
+        case 9:
+            return "background9"
+        case 10:
+            return "background10"
         default:
             return "background1"
         }

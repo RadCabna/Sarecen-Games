@@ -12,6 +12,7 @@ struct Shop: View {
     @AppStorage("coinCount") var coinCount = 0
     @AppStorage("wreathCount") var wreathCount = 0
     @AppStorage("shopType") var shopType = 1
+    @AppStorage("bgNumber") var bgNumber = 3
     @State private var darckOpacity: CGFloat = 0
     @State private var shopArray = Arrays.backgroundArray
     @State private var shopItemsData = UserDefaults.standard.array(forKey: "shopItemsBGData") as? [Int] ?? [1,0,0,0,0]
@@ -132,6 +133,9 @@ struct Shop: View {
         if coinCount >= shopArray[item].cost {
             coinCount -= shopArray[item].cost
             shopItemsData[item] = 1
+            if shopType == 1 {
+                bgNumber = item + 6
+            }
             UserDefaults.standard.set(shopItemsData, forKey: dataName)
         }
     }
