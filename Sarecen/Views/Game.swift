@@ -35,7 +35,7 @@ struct Game: View {
                         .frame(width: screenWidth*0.08)
                         .opacity(gameItemsArray[index].opacity)
                         .offset(x: gameItemsArray[index].xOffset*screenWidth, y:gameItemsArray[index].yOffset*screenHeight)
-                        
+                    
                 }
                 Image(dropCoin.name)
                     .resizable()
@@ -139,13 +139,13 @@ struct Game: View {
                 .offset(y: -kingYOffset*screenHeight)
                 .offset(x: screenWidth*kingXOffset, y: kingYOffset*screenHeight)
                 .ignoresSafeArea()
-//            Image("gameItem1")
-//                .resizable()
-//                .scaledToFit()
-//                .frame(width: screenWidth*0.08)
-//                .offset(x: screenWidth*0, y: screenHeight*0.25)
-//           
-                
+            //            Image("gameItem1")
+            //                .resizable()
+            //                .scaledToFit()
+            //                .frame(width: screenWidth*0.08)
+            //                .offset(x: screenWidth*0, y: screenHeight*0.25)
+            //           
+            
         }
         
         .onAppear {

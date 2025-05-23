@@ -112,18 +112,18 @@ struct BonusGame: View {
         }
         
         .onChange(of: bonusComplete) { _ in
-        if !bonusComplete {
+            if !bonusComplete {
                 elapsedTime = 1
             }
         }
         
         .onChange(of: elapsedTime) { _ in
-        if elapsedTime <= 0 {
+            if elapsedTime <= 0 {
                 stopTimer()
-            stopWreath1Timer()
-            stopWreath2Timer()
-            stopWreath3Timer()
-            bonusComplete = true
+                stopWreath1Timer()
+                stopWreath2Timer()
+                stopWreath3Timer()
+                bonusComplete = true
             }
         }
         
@@ -148,18 +148,14 @@ struct BonusGame: View {
     }
     
     func tapOnIncorrectWreath1() {
-//        wrethCorrectCollect = true
         wreathCount = 0
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-//            wrethCorrectCollect = false
         }
     }
     
     func tapOnIncorrectWreath2() {
-//        wrethCorrectCollect = true
         wreathCount = 0
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-//            wrethCorrectCollect = false
         }
     }
     
@@ -209,7 +205,7 @@ struct BonusGame: View {
     
     func startCorrectWrethTimer() {
         timerWreth1 = Timer.scheduledTimer(withTimeInterval: 3, repeats: true) { _ in
-           randomizeCorrectWreathOffset()
+            randomizeCorrectWreathOffset()
             showAndHideWreth()
         }
     }
@@ -231,14 +227,14 @@ struct BonusGame: View {
     
     func startIncorrectWreth1Timer() {
         timerWreth2 = Timer.scheduledTimer(withTimeInterval: 1.8, repeats: true) { _ in
-           randomizeIncorrectWreath1Offset()
+            randomizeIncorrectWreath1Offset()
             showAndHideWreth1()
         }
     }
     
     func startIncorrectWreth2Timer() {
         timerWreth3 = Timer.scheduledTimer(withTimeInterval: 2.5, repeats: true) { _ in
-           randomizeIncorrectWreath2Offset()
+            randomizeIncorrectWreath2Offset()
             showAndHideWreth2()
         }
     }

@@ -43,7 +43,7 @@ struct Puzzle: View {
                         .scaledToFit()
                         .frame(width: screenWidth*0.08)
                         .onTapGesture {
-//                            restartGame()
+                            //                            restartGame()
                             closeMenuAnimation()
                             DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
                                 restartGame()

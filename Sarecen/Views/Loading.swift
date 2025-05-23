@@ -38,7 +38,7 @@ struct Loading: View {
                                 .overlay(
                                     HStack(spacing: width*0.008) {
                                         ForEach(0...loadingProgress, id: \.self) { item in
-                                        Image("loadingPoint")
+                                            Image("loadingPoint")
                                                 .resizable()
                                                 .scaledToFit()
                                                 .frame(width: width*0.03)
@@ -73,7 +73,7 @@ struct Loading: View {
                                 .overlay(
                                     HStack(spacing: height*0.008) {
                                         ForEach(0...loadingProgress, id: \.self) { item in
-                                        Image("loadingPoint")
+                                            Image("loadingPoint")
                                                 .resizable()
                                                 .scaledToFit()
                                                 .frame(width: height*0.03)
@@ -98,7 +98,7 @@ struct Loading: View {
         }
         
         .onChange(of: loadingProgress) { _ in
-        if loadingProgress >= 8 {
+            if loadingProgress >= 8 {
                 stopTimer()
             }
         }
@@ -136,23 +136,6 @@ struct Loading: View {
             coordinator.navigate(to: .mainMenu)
         }
     }
-    
-//    func trackAnimation() {
-//        trackTimer = Timer.scheduledTimer(withTimeInterval: 0.2, repeats: true) { _ in
-//            if raceBegun {
-//                trackOffset = 0.049
-//                DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-//                    trackOffset = 0
-//                }
-//            }
-//        }
-//    }
-//    
-//    func stopTrackAnimation() {
-//        trackTimer?.invalidate()
-//        trackTimer = nil
-//    }
-    
 }
 
 #Preview {

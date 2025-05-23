@@ -133,6 +133,7 @@ struct Menu: View {
             }
             .offset(y: screenHeight*0.12)
             .opacity(darckOpacity)
+            
         }
         
         .onAppear {
