@@ -17,7 +17,7 @@ struct MiniGame1: View {
     @State private var numberId = 0
     var body: some View {
         ZStack {
-            Background(backgroundNumber: 5)
+            Background(backgroundNumber: 2)
             ZStack {
                 Text("GUES THE NUMBERS")
                     .font(Font.custom("Jomhuria-Regular", size: screenWidth*0.07))

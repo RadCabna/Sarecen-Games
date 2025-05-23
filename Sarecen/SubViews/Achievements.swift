@@ -56,6 +56,9 @@ struct Achievements: View {
                                 .resizable()
                                 .scaledToFit()
                                 .frame(width: screenWidth*0.06)
+                                .onTapGesture {
+                                    getAchieve(item: item)
+                                }
                         default:
                             Image("shopMarkOk")
                                 .resizable()
@@ -74,6 +77,11 @@ struct Achievements: View {
             showMenuAnimation()
         }
         
+    }
+    
+    func getAchieve(item: Int) {
+        achievementsData[item] = 2
+        UserDefaults.standard.setValue(achievementsData, forKey: "achievementsData")
     }
     
     func showMenuAnimation() {

@@ -55,13 +55,28 @@ struct DropItem: Equatable {
     var opacity: CGFloat = 1
 }
 
-
+struct Cards: Equatable {
+    var name: String
+    var open = false
+    var correct = false
+}
 
 struct Step: Equatable {
     var code: String
 }
 
 class Arrays {
+    
+    static var cardLogoArray: [String] = ["cardLogo1", "cardLogo2", "cardLogo3", "cardLogo4", "cardLogo5", "cardLogo6"]
+    
+    static var cardsArray: [Cards] = [
+        Cards(name: "openCard1"),
+        Cards(name: "openCard2"),
+        Cards(name: "openCard3"),
+        Cards(name: "openCard4"),
+        Cards(name: "openCard5"),
+        Cards(name: "openCard6")
+    ]
     
     static var dropCoin: DropItem = DropItem(name: "gameCoin", yOffset: -0.7, delay: 0)
     static var dropWreath: DropItem = DropItem(name: "wreathGold", yOffset: -0.7, delay: 0)
@@ -140,7 +155,7 @@ class Arrays {
         CGSize(width: -104.6, height: 148.8),
         CGSize(width: 0, height: 148.8),
         CGSize(width: 104.6, height: 148.8),
-       ]
+    ]
     
     static var castleUpgradeInfo: [CastleUpgrade] = [
         CastleUpgrade(incCoin: 10, incWreth: 5, costCoin: 3, costWreth: 1),
@@ -148,7 +163,7 @@ class Arrays {
         CastleUpgrade(incCoin: 60, incWreth: 30, costCoin: 12, costWreth: 3),
         CastleUpgrade(incCoin: 120, incWreth: 60, costCoin: 20, costWreth: 5),
         CastleUpgrade(incCoin: 250, incWreth: 100, costCoin: 30, costWreth: 7)
-        ]
+    ]
     
     static var castleArray: [CastleImage] = [
         CastleImage(image: "castle1", name: "King’s Keep", text: "A grand fortress tower where the ruler oversees the kingdom. Upgrading the keep enhances control, unlocking new features and expanding your influence.", yOffset: 0),

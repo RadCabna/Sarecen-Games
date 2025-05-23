@@ -39,10 +39,18 @@
 		DDE65CFC2DDF534000488252 /* Achievements.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE65CFB2DDF534000488252 /* Achievements.swift */; };
 		DDE65CFE2DDF599000488252 /* BonusGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE65CFD2DDF599000488252 /* BonusGame.swift */; };
 		DDE65D002DDF75EC00488252 /* FinishBonusGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE65CFF2DDF75EC00488252 /* FinishBonusGame.swift */; };
+		DDE65D022DE0AD0200488252 /* soundMain.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DDE65D012DE0AD0200488252 /* soundMain.mp3 */; };
+		DDE65D052DE0B03900488252 /* soundFail.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DDE65D032DE0B03900488252 /* soundFail.mp3 */; };
+		DDE65D062DE0B03900488252 /* soundWin.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DDE65D042DE0B03900488252 /* soundWin.mp3 */; };
+		DDE65D082DE0B0E200488252 /* soundBonus.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DDE65D072DE0B0E200488252 /* soundBonus.mp3 */; };
+		DDE65D0A2DE0B12100488252 /* soundCoin.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DDE65D092DE0B12100488252 /* soundCoin.mp3 */; };
+		DDE65D0C2DE0B15F00488252 /* soundCoin1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DDE65D0B2DE0B15F00488252 /* soundCoin1.mp3 */; };
+		DDE65D0F2DE0B20F00488252 /* soundDragCard.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DDE65D0D2DE0B20F00488252 /* soundDragCard.mp3 */; };
+		DDE65D102DE0B20F00488252 /* soundMoveCard.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DDE65D0E2DE0B20F00488252 /* soundMoveCard.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		DDE65CA32DDC95B400488252 /* Sarecen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sarecen.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DDE65CA32DDC95B400488252 /* Sarecen Online.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sarecen Online.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDE65CB32DDC95CB00488252 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DDE65CB52DDC95CB00488252 /* Sarecen.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Sarecen.entitlements; sourceTree = "<group>"; };
 		DDE65CB62DDC95CB00488252 /* SarecenApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SarecenApp.swift; sourceTree = "<group>"; };
@@ -77,6 +85,14 @@
 		DDE65CFB2DDF534000488252 /* Achievements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Achievements.swift; sourceTree = "<group>"; };
 		DDE65CFD2DDF599000488252 /* BonusGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BonusGame.swift; sourceTree = "<group>"; };
 		DDE65CFF2DDF75EC00488252 /* FinishBonusGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishBonusGame.swift; sourceTree = "<group>"; };
+		DDE65D012DE0AD0200488252 /* soundMain.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = soundMain.mp3; sourceTree = "<group>"; };
+		DDE65D032DE0B03900488252 /* soundFail.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = soundFail.mp3; sourceTree = "<group>"; };
+		DDE65D042DE0B03900488252 /* soundWin.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = soundWin.mp3; sourceTree = "<group>"; };
+		DDE65D072DE0B0E200488252 /* soundBonus.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = soundBonus.mp3; sourceTree = "<group>"; };
+		DDE65D092DE0B12100488252 /* soundCoin.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = soundCoin.mp3; sourceTree = "<group>"; };
+		DDE65D0B2DE0B15F00488252 /* soundCoin1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = soundCoin1.mp3; sourceTree = "<group>"; };
+		DDE65D0D2DE0B20F00488252 /* soundDragCard.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = soundDragCard.mp3; sourceTree = "<group>"; };
+		DDE65D0E2DE0B20F00488252 /* soundMoveCard.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = soundMoveCard.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,7 +117,7 @@
 		DDE65CA42DDC95B400488252 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				DDE65CA32DDC95B400488252 /* Sarecen.app */,
+				DDE65CA32DDC95B400488252 /* Sarecen Online.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -174,6 +190,14 @@
 			isa = PBXGroup;
 			children = (
 				DDE65CD82DDCCAD100488252 /* SoundManager.swift */,
+				DDE65D012DE0AD0200488252 /* soundMain.mp3 */,
+				DDE65D032DE0B03900488252 /* soundFail.mp3 */,
+				DDE65D042DE0B03900488252 /* soundWin.mp3 */,
+				DDE65D072DE0B0E200488252 /* soundBonus.mp3 */,
+				DDE65D092DE0B12100488252 /* soundCoin.mp3 */,
+				DDE65D0B2DE0B15F00488252 /* soundCoin1.mp3 */,
+				DDE65D0D2DE0B20F00488252 /* soundDragCard.mp3 */,
+				DDE65D0E2DE0B20F00488252 /* soundMoveCard.mp3 */,
 			);
 			path = Sounds;
 			sourceTree = "<group>";
@@ -230,7 +254,7 @@
 			packageProductDependencies = (
 			);
 			productName = Sarecen;
-			productReference = DDE65CA32DDC95B400488252 /* Sarecen.app */;
+			productReference = DDE65CA32DDC95B400488252 /* Sarecen Online.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -273,7 +297,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				DDE65CD42DDCA7F100488252 /* Jomhuria-Regular.ttf in Resources */,
+				DDE65D0A2DE0B12100488252 /* soundCoin.mp3 in Resources */,
+				DDE65D052DE0B03900488252 /* soundFail.mp3 in Resources */,
+				DDE65D062DE0B03900488252 /* soundWin.mp3 in Resources */,
+				DDE65D022DE0AD0200488252 /* soundMain.mp3 in Resources */,
+				DDE65D082DE0B0E200488252 /* soundBonus.mp3 in Resources */,
 				DDE65CBA2DDC95CB00488252 /* Assets.xcassets in Resources */,
+				DDE65D0F2DE0B20F00488252 /* soundDragCard.mp3 in Resources */,
+				DDE65D102DE0B20F00488252 /* soundMoveCard.mp3 in Resources */,
+				DDE65D0C2DE0B15F00488252 /* soundCoin1.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -444,7 +476,7 @@
 				CODE_SIGN_ENTITLEMENTS = Sarecen/Sarecen.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = TJC4VDAK2F;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -465,8 +497,8 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 15.4;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = f1.Sarecen;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sarac.ceny;
+				PRODUCT_NAME = "Sarecen Online";
 				REGISTER_APP_GROUPS = YES;
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -486,7 +518,7 @@
 				CODE_SIGN_ENTITLEMENTS = Sarecen/Sarecen.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = TJC4VDAK2F;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -507,8 +539,8 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 15.4;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = f1.Sarecen;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sarac.ceny;
+				PRODUCT_NAME = "Sarecen Online";
 				REGISTER_APP_GROUPS = YES;
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";

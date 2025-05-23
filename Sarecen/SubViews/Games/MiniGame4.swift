@@ -18,7 +18,7 @@ struct MiniGame4: View {
     @State private var posibleStepsArray = Arrays.posibleStepsArray
     var body: some View {
         ZStack {
-            Background(backgroundNumber: 5)
+            Background(backgroundNumber: 2)
             HStack {
                 Image("restartButton")
                     .resizable()

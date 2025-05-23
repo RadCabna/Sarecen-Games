@@ -9,6 +9,7 @@ import SwiftUI
 
 struct Game: View {
     @EnvironmentObject var coordinator: Coordinator
+    @State private var achievementsData = UserDefaults.standard.array(forKey: "achievementsData") as? [Int] ?? [0,0,0,0,0]
     @AppStorage("coinCount") var coinCount = 0
     @AppStorage("wreathCount") var wreathCount = 0
     @AppStorage("bgNumber") var bgNumber = 3
@@ -282,6 +283,11 @@ struct Game: View {
                 coinCount += 1
                 dropCoin.opacity = 0
                 dropCoin.collected = true
+                SoundManager.instance.loopSound(sound: "soundCoin1")
+                if achievementsData[0] == 0 {
+                    achievementsData[0] = 1
+                    UserDefaults.standard.setValue(achievementsData, forKey: "achievementsData")
+                }
                 DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
                     dropCoin.collected = false
                     dropCoin.opacity = 1
@@ -295,6 +301,7 @@ struct Game: View {
                 stopCoinTimer()
                 stopWreathTimer()
                 closeMenuAnimation()
+                SoundManager.instance.loopSound(sound: "soundCoin")
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
                     coordinator.navigate(to: .bonusGame)
                 }

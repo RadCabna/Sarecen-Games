@@ -128,6 +128,7 @@ struct BonusGame: View {
         }
         
         .onAppear {
+            SoundManager.instance.loopSound(sound: "soundBonus")
             showMenuAnimation()
             startTimer()
             startCorrectWrethTimer()
@@ -138,6 +139,7 @@ struct BonusGame: View {
     }
     
     func tapOnCorrectWreath() {
+        SoundManager.instance.loopSound(sound: "soundCoin1")
         wrethCorrectCollect = true
         wreathCount += 1
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {

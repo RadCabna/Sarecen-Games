@@ -9,6 +9,7 @@ import SwiftUI
 
 struct Puzzle: View {
     @EnvironmentObject var coordinator: Coordinator
+    @State private var achievementsData = UserDefaults.standard.array(forKey: "achievementsData") as? [Int] ?? [0,0,0,0,0]
     @State private var levelNumber = 10
     @State private var timer: Timer? = nil
     @State private var elapsedTime = 150
@@ -83,6 +84,7 @@ struct Puzzle: View {
                         //                        if sound {
                         //                            SoundPlayer.playSound(index: .random(in: 0...4))
                         //                        }
+                        SoundManager.instance.loopSound(sound: "soundDragCard")
                         withAnimation(.easeIn(duration: 0.2)) {
                             puzzleArray[Index].rotation += 90
                         }
@@ -103,6 +105,7 @@ struct Puzzle: View {
                                 }
                             }
                             .onEnded { value in
+                                SoundManager.instance.loopSound(sound: "soundMoveCard")
                                 withAnimation(.spring()) {
                                     puzzleArray[Index].startOffset = nil
                                     whatPosition(Index: Index)
@@ -146,6 +149,10 @@ struct Puzzle: View {
             if puzzleArray == correctPuzzleArray && makeShuffle{
                 stopTimer()
                 youWin = true
+                if achievementsData[1] == 0 {
+                    achievementsData[1] = 1
+                    UserDefaults.standard.setValue(achievementsData, forKey: "achievementsData")
+                }
             }
         }
         

@@ -139,6 +139,8 @@ struct Menu: View {
             showMenuAnimation()
             buttonAnimation(delay: 0, angle: $angle)
             buttonAnimation(delay: 0.2, angle: $angle1)
+            SoundManager.instance.stopAllSounds()
+            SoundManager.instance.loopSound(sound: "soundMain")
         }
         
     }

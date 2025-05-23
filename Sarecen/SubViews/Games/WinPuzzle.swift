@@ -54,6 +54,7 @@ struct WinPuzzle: View {
         
         .onAppear {
             showMenuAnimation()
+            SoundManager.instance.loopSound(sound: "soundWin")
         }
         
     }

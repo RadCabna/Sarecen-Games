@@ -51,6 +51,7 @@ struct WinMiniGame: View {
         
         .onAppear {
             showMenuAnimation()
+            SoundManager.instance.loopSound(sound: "soundWin")
         }
         
     }
