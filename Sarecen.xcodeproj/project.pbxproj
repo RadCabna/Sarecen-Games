@@ -50,7 +50,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		DDE65CA32DDC95B400488252 /* Sarecen Online.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sarecen Online.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DDE65CA32DDC95B400488252 /* Saracen Online.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Saracen Online.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDE65CB32DDC95CB00488252 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DDE65CB52DDC95CB00488252 /* Sarecen.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Sarecen.entitlements; sourceTree = "<group>"; };
 		DDE65CB62DDC95CB00488252 /* SarecenApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SarecenApp.swift; sourceTree = "<group>"; };
@@ -117,7 +117,7 @@
 		DDE65CA42DDC95B400488252 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				DDE65CA32DDC95B400488252 /* Sarecen Online.app */,
+				DDE65CA32DDC95B400488252 /* Saracen Online.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -254,7 +254,7 @@
 			packageProductDependencies = (
 			);
 			productName = Sarecen;
-			productReference = DDE65CA32DDC95B400488252 /* Sarecen Online.app */;
+			productReference = DDE65CA32DDC95B400488252 /* Saracen Online.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -498,7 +498,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 15.4;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.sarac.ceny;
-				PRODUCT_NAME = "Sarecen Online";
+				PRODUCT_NAME = "Saracen Online";
 				REGISTER_APP_GROUPS = YES;
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -540,7 +540,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 15.4;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.sarac.ceny;
-				PRODUCT_NAME = "Sarecen Online";
+				PRODUCT_NAME = "Saracen Online";
 				REGISTER_APP_GROUPS = YES;
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
